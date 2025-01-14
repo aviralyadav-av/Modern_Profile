@@ -1,0 +1,42 @@
+.star {
+    color: #d1d5db;
+}
+
+.star.selected {
+    color: #fbbf24;
+}
+
+.share-popup {
+    clip-path: circle(0% at 90% 90%);
+    transition: clip-path 0.5s ease-in-out;
+}
+
+.share-popup.active {
+    clip-path: circle(150% at 90% 90%);
+}
+
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}

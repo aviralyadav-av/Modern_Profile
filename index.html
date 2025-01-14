@@ -1,0 +1,2317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vCard Modern Profile</title>
+    <script src="./js/fontawesome.js"></script>
+    <script src="./js/tailwindcss.js"></script>
+    <link href="./style/lightbox.css" rel="stylesheet">
+    <script src="./js/alpinejs.js" defer></script>
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+    <link rel="stylesheet" href="./style/styles.css">
+</head>
+
+<body class="bg-gray-100">
+    <div class="bg-gradient-to-b from-black via-gray-400 to-white min-h-screen w-full ">
+
+        <!-- Navbar section -->
+        <nav class="fixed w-full bottom-0 z-50 transition-all duration-300">
+            <div class="backdrop-blur-custom bg-black/80 shadow-lg">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="flex justify-center items-center h-12">
+
+
+                        <!-- Desktop Menu -->
+                        <div class="hidden md:flex items-center space-x-2">
+                            <a href=""
+                                class="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors duration-300 border-b-2 border-transparent hover:border-white">Profile</a>
+                            <a href="#aboutus"
+                                class="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors duration-300 border-b-2 border-transparent hover:border-white">About
+                                Us</a>
+                            <a href="#services"
+                                class="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors duration-300 border-b-2 border-transparent hover:border-white">Services</a>
+                            <a href="#products"
+                                class="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors duration-300 border-b-2 border-transparent hover:border-white">Products</a>
+                            <a href="#gallery"
+                                class="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors duration-300 border-b-2 border-transparent hover:border-white">Gallery</a>
+                            <a href="#files"
+                                class="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors duration-300 border-b-2 border-transparent hover:border-white">Files</a>
+                            <a href="#youtube"
+                                class="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors duration-300 border-b-2 border-transparent hover:border-white">You
+                                Tube</a>
+                            <a href="#businesshours"
+                                class="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors duration-300 border-b-2 border-transparent hover:border-white">Business
+                                Hours</a>
+                            <a href="#enquiryform"
+                                class="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors duration-300 border-b-2 border-transparent hover:border-white">Enquiry
+                                Form</a>
+                            <a href="#awards"
+                                class="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors duration-300 border-b-2 border-transparent hover:border-white">Awards</a>
+                            <a href="#reviews"
+                                class="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors duration-300 border-b-2 border-transparent hover:border-white">Reviews</a>
+                            <a href="#payments"
+                                class="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors duration-300 border-b-2 border-transparent hover:border-white">Payments</a>
+                            <a href="#qrcode"
+                                class="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors duration-300 border-b-2 border-transparent hover:border-white">QR
+                                Code</a>
+                            <a href="#policies"
+                                class="text-white hover:text-indigo-200 px-3 py-2 text-sm font-medium transition-colors duration-300 border-b-2 border-transparent hover:border-white">Policies</a>
+                        </div>
+
+                        <!-- Mobile Menu Button -->
+                        <div class="md:hidden flex items-center">
+                            <button id="mobile-menu-button"
+                                class="text-white hover:text-red-500 focus:outline-none relative group"
+                                aria-label="Toggle Menu">
+                                <!-- Hamburger Icon -->
+                                <svg id="hamburger-icon"
+                                    class="h-8 w-8 transition-transform duration-300 ease-in-out group-hover:scale-110"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h16M4 18h16"></path>
+                                </svg>
+                                <!-- Close Icon -->
+                                <svg id="close-icon"
+                                    class="h-8 w-8 hidden transition-transform duration-300 ease-in-out group-hover:scale-110"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Mobile Menu -->
+                    <div id="mobile-menu" class="hidden md:hidden pb-10 transition-all duration-300 ease-in-out">
+                        <div class="flex flex-col space-y-2">
+                            <a href=""
+                                class="text-white hover:text-blue-500 px-3 py-2 text-sm font-medium hover:bg-white/10 rounded-md transition-colors duration-300">Profile</a>
+                            <a href="#aboutus"
+                                class="text-white hover:text-blue-500 px-3 py-2 text-sm font-medium hover:bg-white/10 rounded-md transition-colors duration-300">About
+                                Us</a>
+                            <a href="#services"
+                                class="text-white hover:text-blue-500 px-3 py-2 text-sm font-medium hover:bg-white/10 rounded-md transition-colors duration-300">Services</a>
+                            <a href="#products"
+                                class="text-white hover:text-blue-500 px-3 py-2 text-sm font-medium hover:bg-white/10 rounded-md transition-colors duration-300">Products</a>
+                            <a href="#gallery"
+                                class="text-white hover:text-blue-500 px-3 py-2 text-sm font-medium hover:bg-white/10 rounded-md transition-colors duration-300">Gallery</a>
+                            <a href="#files"
+                                class="text-white hover:text-blue-500 px-3 py-2 text-sm font-medium hover:bg-white/10 rounded-md transition-colors duration-300">Files</a>
+                            <a href="#youtube"
+                                class="text-white hover:text-blue-500 px-3 py-2 text-sm font-medium hover:bg-white/10 rounded-md transition-colors duration-300">You
+                                Tube</a>
+                            <a href="#businesshours"
+                                class="text-white hover:text-blue-500 px-3 py-2 text-sm font-medium hover:bg-white/10 rounded-md transition-colors duration-300">Business
+                                Hours</a>
+                            <a href="#enquiryform"
+                                class="text-white hover:text-blue-500 px-3 py-2 text-sm font-medium hover:bg-white/10 rounded-md transition-colors duration-300">Enquiry
+                                Form</a>
+                            <a href="#awards"
+                                class="text-white hover:text-blue-500 px-3 py-2 text-sm font-medium hover:bg-white/10 rounded-md transition-colors duration-300">Awards</a>
+                            <a href="#reviews"
+                                class="text-white hover:text-blue-500 px-3 py-2 text-sm font-medium hover:bg-white/10 rounded-md transition-colors duration-300">Reviews</a>
+                            <a href="#payments"
+                                class="text-white hover:text-blue-500 px-3 py-2 text-sm font-medium hover:bg-white/10 rounded-md transition-colors duration-300">Payments</a>
+                            <a href="#qrcode"
+                                class="text-white hover:text-blue-500 px-3 py-2 text-sm font-medium hover:bg-white/10 rounded-md transition-colors duration-300">QR
+                                Code</a>
+                            <a href="#policies"
+                                class="text-white hover:text-blue-500 px-3 py-2 text-sm font-medium hover:bg-white/10 rounded-md transition-colors duration-300">Policies</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Share section -->
+        <div>
+            <!-- Share Button -->
+            <button id="shareBtn"
+                class="fixed bottom-16 right-6 w-14 h-14 bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 flex items-center justify-center cursor-pointer pulse-animation z-50">
+                <i class="fas fa-share-alt text-white text-2xl"></i>
+            </button>
+
+            <!-- Share Popup -->
+            <div id="sharePopup"
+                class="share-popup fixed lg:bottom-52 bottom:38 right-0 w-full sm:w-72 bg-white lg:rounded-l-3xl   shadow-2xl p-6 z-40">
+                <div class="text-center mb-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Share with friends</h3>
+                    <p class="text-sm text-gray-600">Spread the word on your favorite platform</p>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4">
+                    <!-- Facebook -->
+                    <a href="#" class="social-icon flex flex-col items-center group" data-type="facebook">
+                        <div
+                            class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
+                            <i
+                                class="fab fa-facebook-f text-blue-600 group-hover:text-white text-xl transition-colors duration-300"></i>
+                        </div>
+                        <span class="text-xs text-gray-600 mt-2">Facebook</span>
+                    </a>
+
+                    <!-- Twitter -->
+                    <a href="#" class="social-icon flex flex-col items-center group" data-type="twitter">
+                        <div
+                            class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-400 transition-colors duration-300">
+                            <i
+                                class="fab fa-twitter text-blue-400 group-hover:text-white text-xl transition-colors duration-300"></i>
+                        </div>
+                        <span class="text-xs text-gray-600 mt-2">Twitter</span>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="#" class="social-icon flex flex-col items-center group" data-type="linkedin">
+                        <div
+                            class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-800 transition-colors duration-300">
+                            <i
+                                class="fab fa-linkedin-in text-blue-800 group-hover:text-white text-xl transition-colors duration-300"></i>
+                        </div>
+                        <span class="text-xs text-gray-600 mt-2">LinkedIn</span>
+                    </a>
+
+                    <!-- WhatsApp -->
+                    <a href="#" class="social-icon flex flex-col items-center group" data-type="whatsapp">
+                        <div
+                            class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-green-600 transition-colors duration-300">
+                            <i
+                                class="fab fa-whatsapp text-green-600 group-hover:text-white text-xl transition-colors duration-300"></i>
+                        </div>
+                        <span class="text-xs text-gray-600 mt-2">WhatsApp</span>
+                    </a>
+
+                    <!-- Telegram -->
+                    <a href="#" class="social-icon flex flex-col items-center group" data-type="telegram">
+                        <div
+                            class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
+                            <i
+                                class="fab fa-telegram-plane text-blue-500 group-hover:text-white text-xl transition-colors duration-300"></i>
+                        </div>
+                        <span class="text-xs text-gray-600 mt-2">Telegram</span>
+                    </a>
+
+                    <!-- Copy Link -->
+                    <a href="#" class="social-icon flex flex-col items-center group" id="copyLink">
+                        <div
+                            class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-gray-600 transition-colors duration-300">
+                            <i
+                                class="fas fa-link text-gray-600 group-hover:text-white text-xl transition-colors duration-300"></i>
+                        </div>
+                        <span class="text-xs text-gray-600 mt-2">Copy Link</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- color picker  section -->
+        <div>
+            <button id="colorBtn"
+                class="fixed bottom-36 right-6 w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full shadow-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center pulse-animation cursor-pointer z-50">
+                <i class="fas fa-palette text-white text-2xl transform hover:rotate-12 transition-transform"></i>
+            </button>
+
+            <div id="colorPopup"
+                class="fixed bottom-52 right-0 lg:w-[400px] w-[360px] bg-white rounded-l-2xl shadow-2xl p-6 z-40 hidden opacity-0 transform scale-95 transition-all duration-300">
+                <div class="text-center mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Choose Your Color</h3>
+                    <p class="text-sm text-gray-600">Click on any color to select</p>
+                </div>
+
+                <div class="grid grid-cols-5 gap-10 justify-items-center p-1">
+                    <div class="color-circle w-12 h-12 rounded-full bg-red-500 cursor-pointer transform hover:scale-110 transition-all duration-300 hover:shadow-lg"
+                        data-color="bg-red-500" data-name="Red"></div>
+                    <div class="color-circle w-12 h-12 rounded-full bg-blue-500 cursor-pointer transform hover:scale-110 transition-all duration-300 hover:shadow-lg"
+                        data-color="bg-blue-500" data-name="Blue"></div>
+                    <div class="color-circle w-12 h-12 rounded-full bg-green-500 cursor-pointer transform hover:scale-110 transition-all duration-300 hover:shadow-lg"
+                        data-color="bg-green-500" data-name="Green"></div>
+                    <div class="color-circle w-12 h-12 rounded-full bg-yellow-500 cursor-pointer transform hover:scale-110 transition-all duration-300 hover:shadow-lg"
+                        data-color="bg-yellow-500" data-name="Yellow"></div>
+                    <div class="color-circle w-12 h-12 rounded-full bg-purple-500 cursor-pointer transform hover:scale-110 transition-all duration-300 hover:shadow-lg"
+                        data-color="bg-purple-500" data-name="Purple"></div>
+                    <div class="color-circle w-12 h-12 rounded-full bg-pink-500 cursor-pointer transform hover:scale-110 transition-all duration-300 hover:shadow-lg"
+                        data-color="bg-pink-500" data-name="Pink"></div>
+                    <div class="color-circle w-12 h-12 rounded-full bg-indigo-500 cursor-pointer transform hover:scale-110 transition-all duration-300 hover:shadow-lg"
+                        data-color="bg-indigo-500" data-name="Indigo"></div>
+                    <div class="color-circle w-12 h-12 rounded-full bg-teal-500 cursor-pointer transform hover:scale-110 transition-all duration-300 hover:shadow-lg"
+                        data-color="bg-teal-500" data-name="Teal"></div>
+                    <div class="color-circle w-12 h-12 rounded-full bg-orange-500 cursor-pointer transform hover:scale-110 transition-all duration-300 hover:shadow-lg"
+                        data-color="bg-orange-500" data-name="Orange"></div>
+                    <div class="color-circle w-12 h-12 rounded-full bg-cyan-500 cursor-pointer transform hover:scale-110 transition-all duration-300 hover:shadow-lg"
+                        data-color="bg-cyan-500" data-name="Cyan"></div>
+                </div>
+
+                <div class="mt-6 text-center">
+                    <p class="text-sm text-gray-600 mb-2">Selected Color:</p>
+                    <div id="selectedColor" class="w-full h-8 rounded-lg border-2 border-gray-200"></div>
+                    <p id="colorName" class="text-sm font-semibold mt-2 text-gray-800">Select a color</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile section -->
+        <div id="profile" class="max-w-[664px] mx-auto   bg-white shadow-xl overflow-hidden">
+            <!-- Cover Section -->
+            <div class="relative h-44 bg-gradient-to-r from-blue-600 to-purple-600">
+                <img src="assets/cover.jpg" alt="" class="absolute inset-0 h-full w-full object-cover">
+            </div>
+
+
+            <!-- Profile Content -->
+            <div class="relative px-6 pb-6">
+                <!-- Profile Image -->
+                <div class="absolute -top-16 left-6">
+                    <div class="relative group">
+                        <div class="w-32 h-32 rounded-2xl border-4 border-white overflow-hidden shadow-2xl ">
+                            <img src="assets/profile.jpg" alt="John Doe" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- Profile Info -->
+                <div class="pt-20">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h1 class="text-3xl font-bold text-gray-900">John Doe</h1>
+                            <p id="postText" class="text-blue-600 font-medium">Senior Web Developer</p>
+                            <p class="text-gray-700 text-sm">Accenture</p>
+                        </div>
+
+                        <a id="addContactLink" href="#_"
+                            class="box-border relative z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-bold text-white transition-all duration-300 bg-blue-600 rounded-full cursor-pointer group ring-offset-2 ring-1 ring-blue-300 ring-offset-blue-200 hover:ring-offset-blue-500 ease focus:outline-none">
+                            <span
+                                class="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
+                            <span
+                                class="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
+                            <span class="relative z-20 flex items-center text-sm gap-4">
+                                <span>Add Contact</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="mt-4 flex justify-center gap-6">
+                        <a href="tel:919999999999" class="block text-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full">
+                                <i class="fas fa-phone text-blue-600"></i>
+                            </div>
+                        </a>
+                        <a href="mailto:johndoe@gmail.com" class="block text-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-green-100 rounded-full">
+                                <i class="fas fa-envelope text-green-600"></i>
+                            </div>
+                        </a>
+                        <a href="sms:919999999999" class="block text-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-purple-100 rounded-full">
+                                <i class="fas fa-comment text-purple-600"></i>
+                            </div>
+                        </a>
+                        <a href="https://maps.app.goo.gl/quP3w9fHGffHURt18" class="block text-center">
+                            <div class="w-10 h-10 flex items-center justify-center bg-red-100 rounded-full">
+                                <i class="fas fa-location-dot text-red-600"></i>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <!-- Contact Details -->
+                    <div class="flex flex-col md:flex-col justify-center items-center gap-4 mt-8">
+                        <div class="flex flex-row items-center md:items-start md:flex-row gap-4">
+                            <i class="fas fa-phone text-blue-600 text-xl"></i>
+                            <div class="flex flex-row md:flex-row items-center gap-2">
+                                <a href="tel:919999999999" class="text-gray-900 font-medium hover:text-green-600">
+                                    +91 9999 999 999
+                                </a>
+                                <span class="text-gray-400 hidden md:block">&bull;</span>
+                                <a href="tel:911234567890" class="text-gray-900 font-medium hover:text-green-600">
+                                    +91 1234 567 890
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row items-center md:items-start md:flex-row gap-4">
+                            <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                            <div class="flex flex-row md:flex-row items-center gap-2">
+                                <a href="mailto:johndoe@gmail.com"
+                                    class="text-gray-900 font-medium hover:text-blue-600">
+                                    johndoe@gmail.com
+                                </a>
+                                <span class="text-gray-400 hidden md:block">&bull;</span>
+                                <a href="mailto:johndoe123@gmail.com"
+                                    class="text-gray-900 font-medium hover:text-blue-600">
+                                    johndoe123@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row items-center md:items-start md:flex-row gap-4">
+                            <i class="fas fa-location-dot text-blue-600 text-xl"></i>
+                            <a href="https://maps.app.goo.gl/quP3w9fHGffHURt18"
+                                class="text-gray-900 font-medium hover:text-blue-600 border-2 border-blue-100 px-4  rounded-full">
+                                House no. 13, XYZ Street
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
+                    <div id="colorBorder" class="border-4 rounded-full border-blue-500 w-full mt-16"></div>
+
+                    <!-- Social Media -->
+                    <div
+                        class="flex justify-center lg:gap-6 gap-4 p-2 border-2 rounded-full -mt-8 bg-white shadow-lg lg:w-[80%] mx-auto">
+                        <a href="https://google.com"
+                            class="lg:text-4xl text-2xl text-gray-500 hover:-translate-y-3 transition-transform duration-300">
+                            <i class="fa-solid fa-globe"></i>
+                        </a>
+                        <a href="https://facebook.com"
+                            class="lg:text-4xl text-2xl text-blue-600 hover:-translate-y-3 transition-transform duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com"
+                            class="lg:text-4xl text-2xl text-pink-600 hover:-translate-y-3 transition-transform duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com"
+                            class="lg:text-4xl text-2xl text-blue-500 hover:-translate-y-3 transition-transform duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://twitter.com"
+                            class="lg:text-4xl text-2xl text-gray-900 hover:-translate-y-3 transition-transform duration-300">
+                            <i class="fa-brands fa-x-twitter"></i> </a>
+                        <a href="https://youtube.com"
+                            class="lg:text-4xl text-2xl text-red-600 hover:-translate-y-3 transition-transform duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://skype.com"
+                            class="lg:text-4xl text-2xl text-sky-500 hover:-translate-y-3 transition-transform duration-300">
+                            <i class="fab fa-skype"></i>
+                        </a>
+                        <a href="https://wa.me/1234567890"
+                            class="lg:text-4xl text-2xl text-green-500 hover:-translate-y-3 transition-transform duration-300">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- About us -->
+        <div id="aboutus" class="max-w-[664px] mx-auto bg-white shadow-2xl rounded-sm overflow-hidden">
+            <div class="p-8">
+                <!-- Heading Section -->
+                <h2 id="headingText" class="text-4xl md:text-5xl font-extrabold text-center mb-10 ">
+                    About Us
+                </h2>
+
+                <!-- Content Section -->
+                <div id="content" class="text-gray-700 leading-relaxed space-y-6 line-clamp-5">
+                    <section>
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a
+                            page
+                            when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                            normal
+                            distribution of letters, making it look like readable English. 😀
+                        </p>
+                    </section>
+
+                    <section>
+                        <p>
+                            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default
+                            model
+                            text, as it provides a clean and professional appearance, maintaining a consistent
+                            distribution of
+                            characters.
+                        </p>
+                    </section>
+
+                    <section>
+                        <p>
+                            It remains the industry standard for placeholder text, helping designers focus on visual
+                            layout
+                            without the distraction of content creation.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <button onclick="toggleContent()" id="toggleBtn"
+                        class="group inline-flex items-center gap-2 px-8 py-3 bg-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                        <span>View More</span>
+                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- service  Section -->
+        <div id="services" class="max-w-[664px] mx-auto bg-white p-8">
+            <h2 id="servicesHeading" class="text-4xl md:text-5xl font-extrabold text-center mb-10 ">
+                Our Services </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="initial-card card group relative overflow-hidden rounded-xl bg-gradient-to-br from-blue-900 to-blue-950 p-1 transition-all duration-300 hover:scale-[1.02] hover:shadow-3xl">
+                    <div class="relative h-full rounded-lg bg-gradient-to-br from-blue-900 to-blue-950 p-6">
+                        <div
+                            class="absolute inset-0 bg-[url('/assets/cover.jpg')] opacity-80 mix-blend-overlay transition-opacity group-hover:opacity-30">
+                            <img src="assets/cover.jpg" alt="" class="w-full h-full object-cover" />
+                        </div>
+                        <p class="absolute top-2 right-2 bg-green-100 text-green-700 font-semibold px-2  rounded-full">
+                            <span class="text-yellow-600">$</span> 399
+                        </p>
+                        <div class="relative space-y-4">
+                            <div class="h-12 w-12 rounded-full bg-blue-500/20 p-3">
+                                <svg class="h-full w-full text-blue-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Email Marketing</h3>
+
+                            <p class="text-sm text-gray-300">Lorem ipsum is simply dummy text of the printing and
+                                typesetting industry.</p>
+
+                            <a href="#_"
+                                class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
+                                <span
+                                    class="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
+                                <span
+                                    class="relative px-4 py-1 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
+                                    <span class="relative text-white">Enquire Now</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="initial-card card group relative overflow-hidden rounded-xl bg-gradient-to-br from-indigo-900 to-indigo-950 p-1 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                    <div class="relative h-full rounded-lg bg-gradient-to-br from-indigo-900 to-indigo-950 p-6">
+                        <div
+                            class="absolute inset-0 bg-[url('/assets/cover.jpg')] opacity-80 mix-blend-overlay transition-opacity group-hover:opacity-30">
+                            <img src="assets/cover.jpg" alt="" class="w-full h-full object-cover" />
+                        </div>
+                        <p class="absolute top-2 right-2 bg-green-100 text-green-700 font-semibold px-2  rounded-full">
+                            <span class="text-yellow-600">$</span> 399
+                        </p>
+
+                        <div class="relative space-y-4">
+                            <div class="h-12 w-12 rounded-full bg-indigo-500/20 p-3">
+                                <svg class="h-full w-full text-indigo-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Social Media</h3>
+                            <p class="text-sm text-gray-300">Lorem ipsum is simply dummy text of the printing and
+                                typesetting industry.</p>
+                            <a href="#_"
+                                class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
+                                <span
+                                    class="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
+                                <span
+                                    class="relative px-4 py-1 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
+                                    <span class="relative text-white">Enquire Now</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="initial-card desktop-only card group relative overflow-hidden rounded-xl bg-gradient-to-br from-purple-900 to-purple-950 p-1 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                    <div class="relative h-full rounded-lg bg-gradient-to-br from-purple-900 to-purple-950 p-6">
+                        <div
+                            class="absolute inset-0 bg-[url('/assets/cover.jpg')] opacity-80 mix-blend-overlay transition-opacity group-hover:opacity-30">
+                            <img src="assets/cover.jpg" alt="" class="w-full h-full object-cover" />
+                        </div>
+                        <p class="absolute top-2 right-2 bg-green-100 text-green-700 font-semibold px-2  rounded-full">
+                            <span class="text-yellow-600">$</span> 399
+                        </p>
+
+                        <div class="relative space-y-4">
+                            <div class="h-12 w-12 rounded-full bg-purple-500/20 p-3">
+                                <svg class="h-full w-full text-purple-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Web Development</h3>
+                            <p class="text-sm text-gray-300">Lorem ipsum is simply dummy text of the printing and
+                                typesetting industry.</p>
+                            <a href="#_"
+                                class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
+                                <span
+                                    class="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
+                                <span
+                                    class="relative px-4 py-1 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
+                                    <span class="relative text-white">Enquire Now</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="initial-card desktop-only card group relative overflow-hidden rounded-xl bg-gradient-to-br from-cyan-900 to-cyan-950 p-1 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                    <div class="relative h-full rounded-lg bg-gradient-to-br from-cyan-900 to-cyan-950 p-6">
+                        <div
+                            class="absolute inset-0 bg-[url('/assets/cover.jpg')] opacity-80 mix-blend-overlay transition-opacity group-hover:opacity-30">
+                            <img src="assets/cover.jpg" alt="" class="w-full h-full object-cover" />
+                        </div>
+                        <p class="absolute top-2 right-2 bg-green-100 text-green-700 font-semibold px-2  rounded-full">
+                            <span class="text-yellow-600">$</span> 399
+                        </p>
+
+                        <div class="relative space-y-4">
+                            <div class="h-12 w-12 rounded-full bg-cyan-500/20 p-3">
+                                <svg class="h-full w-full text-cyan-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Testing Service</h3>
+                            <p class="text-sm text-gray-300">Lorem ipsum is simply dummy text of the printing and
+                                typesetting industry.</p>
+                            <a href="#_"
+                                class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
+                                <span
+                                    class="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
+                                <span
+                                    class="relative px-4 py-1 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
+                                    <span class="relative text-white">Enquire Now</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div
+                    class="hidden-card card hidden group relative overflow-hidden rounded-xl bg-gradient-to-br from-green-900 to-green-950 p-1 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                    <div class="relative h-full rounded-lg bg-gradient-to-br from-green-900 to-green-950 p-6">
+                        <div
+                            class="absolute inset-0 bg-[url('/assets/cover.jpg')] opacity-80 mix-blend-overlay transition-opacity group-hover:opacity-30">
+                            <img src="assets/cover.jpg" alt="" class="w-full h-full object-cover" />
+                        </div>
+                        <p class="absolute top-2 right-2 bg-green-100 text-green-700 font-semibold px-2  rounded-full">
+                            <span class="text-yellow-600">$</span> 399
+                        </p>
+
+                        <div class="relative space-y-4">
+                            <div class="h-12 w-12 rounded-full bg-green-500/20 p-3">
+                                <svg class="h-full w-full text-green-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Digital Marketing</h3>
+                            <p class="text-sm text-gray-300">Lorem ipsum is simply dummy text of the printing and
+                                typesetting industry.</p>
+                            <a href="#_"
+                                class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
+                                <span
+                                    class="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
+                                <span
+                                    class="relative px-4 py-1 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
+                                    <span class="relative text-white">Enquire Now</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div
+                    class="hidden-card card hidden group relative overflow-hidden rounded-xl bg-gradient-to-br from-green-900 to-green-950 p-1 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                    <div class="relative h-full rounded-lg bg-gradient-to-br from-yellow-900 to-yellow-950 p-6">
+                        <div
+                            class="absolute inset-0 bg-[url('/assets/cover.jpg')] opacity-80 mix-blend-overlay transition-opacity group-hover:opacity-30">
+                            <img src="assets/cover.jpg" alt="" class="w-full h-full object-cover" />
+                        </div>
+                        <p class="absolute top-2 right-2 bg-green-100 text-green-700 font-semibold px-2  rounded-full">
+                            <span class="text-yellow-600">$</span> 399
+                        </p>
+
+                        <div class="relative space-y-4">
+                            <div class="h-12 w-12 rounded-full bg-yellow-500/20 p-3">
+                                <svg class="h-full w-full text-yellow-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">App Development</h3>
+                            <p class="text-sm text-gray-300">Lorem ipsum is simply dummy text of the printing and
+                                typesetting industry.</p>
+                            <a href="#_"
+                                class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
+                                <span
+                                    class="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
+                                <span
+                                    class="relative px-4 py-1 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
+                                    <span class="relative text-white">Enquire Now</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div
+                    class="hidden-card card hidden group relative overflow-hidden rounded-xl bg-gradient-to-br from-green-900 to-green-950 p-1 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                    <div class="relative h-full rounded-lg bg-gradient-to-br from-blue-900 to-blue-950 p-6">
+                        <div
+                            class="absolute inset-0 bg-[url('/assets/cover.jpg')] opacity-80 mix-blend-overlay transition-opacity group-hover:opacity-30">
+                            <img src="assets/cover.jpg" alt="" class="w-full h-full object-cover" />
+                        </div>
+                        <p class="absolute top-2 right-2 bg-green-100 text-green-700 font-semibold px-2  rounded-full">
+                            <span class="text-yellow-600">$</span> 399
+                        </p>
+
+                        <div class="relative space-y-4">
+                            <div class="h-12 w-12 rounded-full bg-blue-500/20 p-3">
+                                <svg class="h-full w-full text-blue-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Email Marketing</h3>
+                            <p class="text-sm text-gray-300">Lorem ipsum is simply dummy text of the printing and
+                                typesetting industry.</p>
+                            <a href="#_"
+                                class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
+                                <span
+                                    class="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
+                                <span
+                                    class="relative px-4 py-1 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
+                                    <span class="relative text-white">Enquire Now</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div
+                    class="hidden-card card hidden group relative overflow-hidden rounded-xl bg-gradient-to-br from-green-900 to-green-950 p-1 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                    <div class="relative h-full rounded-lg bg-gradient-to-br from-pink-900 to-pink-950 p-6">
+                        <div
+                            class="absolute inset-0 bg-[url('/assets/cover.jpg')] opacity-80 mix-blend-overlay transition-opacity group-hover:opacity-30">
+                            <img src="assets/cover.jpg" alt="" class="w-full h-full object-cover" />
+                        </div>
+                        <p class="absolute top-2 right-2 bg-green-100 text-green-700 font-semibold px-2  rounded-full">
+                            <span class="text-yellow-600">$</span> 399
+                        </p>
+                        <div class="relative space-y-4">
+                            <div class="h-12 w-12 rounded-full bg-pink-500/20 p-3">
+                                <svg class="h-full w-full text-pink-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Content Strategy</h3>
+                            <p class="text-sm text-gray-300">Lorem ipsum is simply dummy text of the printing and
+                                typesetting industry.</p>
+                            <a href="#_"
+                                class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
+                                <span
+                                    class="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
+                                <span
+                                    class="relative px-4 py-1 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
+                                    <span class="relative text-white">Enquire Now</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-8 text-center">
+                <button id="toggleButton"
+                    class="group inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                    <span>View More</span>
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Our Products Section -->
+        <div id="products" class="max-w-[664px] mx-auto bg-white p-8">
+            <h2 id="productsHeading" class="text-4xl md:text-5xl font-extrabold text-center mb-10 ">
+                Our Products </h2>
+            <div id="productsContainer" class="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="product-card w-full max-w-sm overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl hover:shadow-blue-200 relative">
+                    <div class="flex flex-col">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="assets/cover.jpg" alt="Product"
+                                class="h-full w-full object-cover transition-transform duration-500 ease-in-out hover:scale-110" />
+                        </div>
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 z-10">
+                            <div
+                                class="bg-gradient-to-br from-green-400 to-green-900 text-gray-100 text-lg font-semibold rounded-full px-4 py-1 shadow-2xl">
+                                $ 99.99
+                            </div>
+                        </div>
+                        <div class="space-y-2 p-4">
+                            <h3
+                                class="text-2xl lg:text-xl font-bold text-gray-800 transition-colors duration-300 hover:text-blue-600 mt-4">
+                                Premium Email Marketing
+                            </h3>
+                            <p class="text-xs text-gray-500">
+                                Professional email marketing solution to reach your audience effectively and drive
+                                engagement.
+                            </p>
+                            <div class="flex gap-2">
+                                <button
+                                    class="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 p-0.5 text-sm font-medium text-white hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 mt-2">
+                                    <span
+                                        class="relative px-5 py-2 transition-all duration-300 ease-in-out bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                        Buy Now
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="product-card  w-full max-w-sm overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-green-200 hover:shadow-xl relative">
+                    <div class="flex flex-col">
+                        <!-- Image Section -->
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="assets/cover.jpg" alt="Product"
+                                class="h-full w-full object-cover transition-transform duration-500 ease-in-out hover:scale-110" />
+                        </div>
+
+                        <!-- Price Tag - Positioned absolute -->
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 z-10">
+                            <div
+                                class="bg-gradient-to-br from-green-400 to-green-900 text-gray-100 text-lg font-semibold rounded-full px-4 py-1 shadow-2xl">
+                                $ 99.99
+                            </div>
+                        </div>
+
+                        <!-- Content Section -->
+                        <div class="space-y-2 p-4">
+                            <!-- Product Name -->
+                            <h3
+                                class="text-2xl lg:text-xl font-bold text-gray-800 transition-colors duration-300 hover:text-blue-600 mt-4">
+                                Premium Email Marketing
+                            </h3>
+                            <!-- Description -->
+                            <p class="text-xs text-gray-500">
+                                Professional email marketing solution to reach your audience effectively and drive
+                                engagement.
+                            </p>
+                            <!-- Buttons Container -->
+                            <div class="flex gap-2">
+                                <!-- Buy Now Button -->
+                                <button
+                                    class="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 p-0.5 text-sm font-medium text-white hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 mt-2">
+                                    <span
+                                        class="relative px-5 py-2 transition-all duration-300 ease-in-out bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                        Buy Now
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="product-card  w-full max-w-sm overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-yellow-200 hover:shadow-xl relative">
+                    <div class="flex flex-col">
+                        <!-- Image Section -->
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="assets/cover.jpg" alt="Product"
+                                class="h-full w-full object-cover transition-transform duration-500 ease-in-out hover:scale-110" />
+                        </div>
+
+                        <!-- Price Tag - Positioned absolute -->
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 z-10">
+                            <div
+                                class="bg-gradient-to-br from-green-400 to-green-900 text-gray-100 text-lg font-semibold rounded-full px-4 py-1 shadow-2xl">
+                                $ 99.99
+                            </div>
+                        </div>
+
+                        <!-- Content Section -->
+                        <div class="space-y-2 p-4">
+                            <!-- Product Name -->
+                            <h3
+                                class="text-2xl lg:text-xl font-bold text-gray-800 transition-colors duration-300 hover:text-blue-600 mt-4">
+                                Premium Email Marketing
+                            </h3>
+                            <!-- Description -->
+                            <p class="text-xs text-gray-500">
+                                Professional email marketing solution to reach your audience effectively and drive
+                                engagement.
+                            </p>
+                            <!-- Buttons Container -->
+                            <div class="flex gap-2">
+                                <!-- Buy Now Button -->
+                                <button
+                                    class="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 p-0.5 text-sm font-medium text-white hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 mt-2">
+                                    <span
+                                        class="relative px-5 py-2 transition-all duration-300 ease-in-out bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                        Buy Now
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class=" product-card  w-full max-w-sm overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-pink-200 hover:shadow-xl relative">
+                    <div class="flex flex-col">
+                        <!-- Image Section -->
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="assets/cover.jpg" alt="Product"
+                                class="h-full w-full object-cover transition-transform duration-500 ease-in-out hover:scale-110" />
+                        </div>
+
+                        <!-- Price Tag - Positioned absolute -->
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 z-10">
+                            <div
+                                class="bg-gradient-to-br from-green-400 to-green-900 text-gray-100 text-lg font-semibold rounded-full px-4 py-1 shadow-2xl">
+                                $ 99.99
+                            </div>
+                        </div>
+
+                        <!-- Content Section -->
+                        <div class="space-y-2 p-4">
+                            <!-- Product Name -->
+                            <h3
+                                class="text-2xl lg:text-xl font-bold text-gray-800 transition-colors duration-300 hover:text-blue-600 mt-4">
+                                Premium Email Marketing
+                            </h3>
+                            <!-- Description -->
+                            <p class="text-xs text-gray-500">
+                                Professional email marketing solution to reach your audience effectively and drive
+                                engagement.
+                            </p>
+                            <!-- Buttons Container -->
+                            <div class="flex gap-2">
+                                <!-- Buy Now Button -->
+                                <button
+                                    class="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 p-0.5 text-sm font-medium text-white hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 mt-2">
+                                    <span
+                                        class="relative px-5 py-2 transition-all duration-300 ease-in-out bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                        Buy Now
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div
+                    class="product-card w-full max-w-sm overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-red-200 hover:shadow-xl relative">
+                    <div class="flex flex-col">
+                        <!-- Image Section -->
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="assets/cover.jpg" alt="Product"
+                                class="h-full w-full object-cover transition-transform duration-500 ease-in-out hover:scale-110" />
+                        </div>
+
+                        <!-- Price Tag - Positioned absolute -->
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 z-10">
+                            <div
+                                class="bg-gradient-to-br from-green-400 to-green-900 text-gray-100 text-lg font-semibold rounded-full px-4 py-1 shadow-2xl">
+                                $ 99.99
+                            </div>
+                        </div>
+
+                        <!-- Content Section -->
+                        <div class="space-y-2 p-4">
+                            <!-- Product Name -->
+                            <h3
+                                class="text-2xl lg:text-xl font-bold text-gray-800 transition-colors duration-300 hover:text-blue-600 mt-4">
+                                Premium Email Marketing
+                            </h3>
+                            <!-- Description -->
+                            <p class="text-xs text-gray-500">
+                                Professional email marketing solution to reach your audience effectively and drive
+                                engagement.
+                            </p>
+                            <!-- Buttons Container -->
+                            <div class="flex gap-2">
+                                <!-- Buy Now Button -->
+                                <button
+                                    class="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 p-0.5 text-sm font-medium text-white hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 mt-2">
+                                    <span
+                                        class="relative px-5 py-2 transition-all duration-300 ease-in-out bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                        Buy Now
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div
+                    class="product-card w-full max-w-sm overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-purple-200 hover:shadow-xl relative">
+                    <div class="flex flex-col">
+                        <!-- Image Section -->
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="assets/cover.jpg" alt="Product"
+                                class="h-full w-full object-cover transition-transform duration-500 ease-in-out hover:scale-110" />
+                        </div>
+
+                        <!-- Price Tag - Positioned absolute -->
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 z-10">
+                            <div
+                                class="bg-gradient-to-br from-green-400 to-green-900 text-gray-100 text-lg font-semibold rounded-full px-4 py-1 shadow-2xl">
+                                $ 99.99
+                            </div>
+                        </div>
+
+                        <!-- Content Section -->
+                        <div class="space-y-2 p-4">
+                            <!-- Product Name -->
+                            <h3
+                                class="text-2xl lg:text-xl font-bold text-gray-800 transition-colors duration-300 hover:text-blue-600 mt-4">
+                                Premium Email Marketing
+                            </h3>
+                            <!-- Description -->
+                            <p class="text-xs text-gray-500">
+                                Professional email marketing solution to reach your audience effectively and drive
+                                engagement.
+                            </p>
+                            <!-- Buttons Container -->
+                            <div class="flex gap-2">
+                                <!-- Buy Now Button -->
+                                <button
+                                    class="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 p-0.5 text-sm font-medium text-white hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 mt-2">
+                                    <span
+                                        class="relative px-5 py-2 transition-all duration-300 ease-in-out bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                        Buy Now
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div
+                    class="product-card w-full max-w-sm overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-green-200 hover:shadow-xl relative">
+                    <div class="flex flex-col">
+                        <!-- Image Section -->
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="assets/cover.jpg" alt="Product"
+                                class="h-full w-full object-cover transition-transform duration-500 ease-in-out hover:scale-110" />
+                        </div>
+
+                        <!-- Price Tag - Positioned absolute -->
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 z-10">
+                            <div
+                                class="bg-gradient-to-br from-green-400 to-green-900 text-gray-100 text-lg font-semibold rounded-full px-4 py-1 shadow-2xl">
+                                $ 99.99
+                            </div>
+                        </div>
+
+                        <!-- Content Section -->
+                        <div class="space-y-2 p-4">
+                            <!-- Product Name -->
+                            <h3
+                                class="text-2xl lg:text-xl font-bold text-gray-800 transition-colors duration-300 hover:text-blue-600 mt-4">
+                                Premium Email Marketing
+                            </h3>
+                            <!-- Description -->
+                            <p class="text-xs text-gray-500">
+                                Professional email marketing solution to reach your audience effectively and drive
+                                engagement.
+                            </p>
+                            <!-- Buttons Container -->
+                            <div class="flex gap-2">
+                                <!-- Buy Now Button -->
+                                <button
+                                    class="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 p-0.5 text-sm font-medium text-white hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 mt-2">
+                                    <span
+                                        class="relative px-5 py-2 transition-all duration-300 ease-in-out bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                        Buy Now
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div
+                    class="product-card w-full max-w-sm overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-blue-200 hover:shadow-xl relative">
+                    <div class="flex flex-col">
+                        <!-- Image Section -->
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="assets/cover.jpg" alt="Product"
+                                class="h-full w-full object-cover transition-transform duration-500 ease-in-out hover:scale-110" />
+                        </div>
+
+                        <!-- Price Tag - Positioned absolute -->
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 z-10">
+                            <div
+                                class="bg-gradient-to-br from-green-400 to-green-900 text-gray-100 text-lg font-semibold rounded-full px-4 py-1 shadow-2xl">
+                                $ 99.99
+                            </div>
+                        </div>
+
+                        <!-- Content Section -->
+                        <div class="space-y-2 p-4">
+                            <!-- Product Name -->
+                            <h3
+                                class="text-2xl lg:text-xl font-bold text-gray-800 transition-colors duration-300 hover:text-blue-600 mt-4">
+                                Premium Email Marketing
+                            </h3>
+                            <!-- Description -->
+                            <p class="text-xs text-gray-500">
+                                Professional email marketing solution to reach your audience effectively and drive
+                                engagement.
+                            </p>
+                            <!-- Buttons Container -->
+                            <div class="flex gap-2">
+                                <!-- Buy Now Button -->
+                                <button
+                                    class="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 p-0.5 text-sm font-medium text-white hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 mt-2">
+                                    <span
+                                        class="relative px-5 py-2 transition-all duration-300 ease-in-out bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                        Buy Now
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="mt-8 text-center">
+                <button id="ProductButton"
+                    class="group inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                    <span>View More</span>
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Our Gallery Section -->
+        <div id="gallery" class="bg-white max-w-[664px] mx-auto">
+            <h2 id="galleryText" class="text-4xl md:text-5xl font-extrabold text-center mb-10">
+                Our Gallery
+            </h2>
+            <div id="gallerySection" class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-[664px] mx-auto p-4">
+                <!-- Large Image -->
+                <div class="galleryItem col-span-2 row-span-2 relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1736478770857-ed521c3b469c?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Gallery Image 1"
+                        class="w-full h-full object-cover rounded-lg cursor-pointer shadow-md hover:shadow-lg transition-transform transform hover:scale-105 duration-300">
+                    <div class="absolute inset-0 cursor-pointer bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        onclick="openGalleryModal(1)">
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <h3 class="text-2xl font-bold text-white">Gallery Image</h3>
+                            <p class="text-white">Click to explore more</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Small Images -->
+                <div class="galleryItem aspect-w-1 aspect-h-1 relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Gallery Image 2"
+                        class="w-full h-full object-cover cursor-pointer transition-transform transform hover:scale-105 duration-300">
+                    <div class="absolute inset-0 cursor-pointer bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        onclick="openGalleryModal(2)">
+                        <div class="absolute bottom-0 left-0 right-0 p-2">
+                            <h3 class="text-md font-bold text-white">Gallery Image 2</h3>
+                            <p class="text-white text-xs">Click to explore more</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="galleryItem aspect-w-1 aspect-h-1 relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Gallery Image 2"
+                        class="w-full h-full object-cover cursor-pointer transition-transform transform hover:scale-105 duration-300">
+                    <div class="absolute inset-0 cursor-pointer bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        onclick="openGalleryModal(3)">
+                        <div class="absolute bottom-0 left-0 right-0 p-2">
+                            <h3 class="text-md font-bold text-white">Gallery Image 2</h3>
+                            <p class="text-white text-xs">Click to explore more</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="galleryItem aspect-w-1 aspect-h-1 relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Gallery Image 2"
+                        class="w-full h-full object-cover cursor-pointer transition-transform transform hover:scale-105 duration-300">
+                    <div class="absolute inset-0 cursor-pointer bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        onclick="openGalleryModal(4)">
+                        <div class="absolute bottom-0 left-0 right-0 p-2">
+                            <h3 class="text-md font-bold text-white">Gallery Image 2</h3>
+                            <p class="text-white text-xs">Click to explore more</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="galleryItem aspect-w-1 aspect-h-1 relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Gallery Image 2"
+                        class="w-full h-full object-cover cursor-pointer transition-transform transform hover:scale-105 duration-300">
+                    <div class="absolute inset-0 cursor-pointer bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        onclick="openGalleryModal(5)">
+                        <div class="absolute bottom-0 left-0 right-0 p-2">
+                            <h3 class="text-md font-bold text-white">Gallery Image 2</h3>
+                            <p class="text-white text-xs">Click to explore more</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="galleryItem aspect-w-1 aspect-h-1 relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Gallery Image 2"
+                        class="w-full h-full object-cover cursor-pointer transition-transform transform hover:scale-105 duration-300">
+                    <div class="absolute inset-0 cursor-pointer bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        onclick="openGalleryModal(6)">
+                        <div class="absolute bottom-0 left-0 right-0 p-2">
+                            <h3 class="text-md font-bold text-white">Gallery Image 2</h3>
+                            <p class="text-white text-xs">Click to explore more</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="galleryItem aspect-w-1 aspect-h-1 relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Gallery Image 2"
+                        class="w-full h-full object-cover cursor-pointer transition-transform transform hover:scale-105 duration-300">
+                    <div class="absolute inset-0 cursor-pointer bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        onclick="openGalleryModal(7)">
+                        <div class="absolute bottom-0 left-0 right-0 p-2">
+                            <h3 class="text-md font-bold text-white">Gallery Image 2</h3>
+                            <p class="text-white text-xs">Click to explore more</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="galleryItem aspect-w-1 aspect-h-1 relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Gallery Image 2"
+                        class="w-full h-full object-cover cursor-pointer transition-transform transform hover:scale-105 duration-300">
+                    <div class="absolute inset-0 cursor-pointer bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        onclick="openGalleryModal(8)">
+                        <div class="absolute bottom-0 left-0 right-0 p-2">
+                            <h3 class="text-md font-bold text-white">Gallery Image 2</h3>
+                            <p class="text-white text-xs">Click to explore more</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="galleryItem aspect-w-1 aspect-h-1 relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Gallery Image 2"
+                        class="w-full h-full object-cover cursor-pointer transition-transform transform hover:scale-105 duration-300">
+                    <div class="absolute inset-0 cursor-pointer bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        onclick="openGalleryModal(9)">
+                        <div class="absolute bottom-0 left-0 right-0 p-2">
+                            <h3 class="text-md font-bold text-white">Gallery Image 2</h3>
+                            <p class="text-white text-xs">Click to explore more</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <button id="viewToggleButton"
+                    class="group inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                    <span>View More</span>
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+                </button>
+            </div>
+
+
+
+            <!-- Modal -->
+            <div id="galleryModal"
+                class="fixed inset-0 z-50 hidden bg-black bg-opacity-90 flex items-center justify-center">
+                <span class="absolute top-4 right-6 text-white text-3xl font-bold cursor-pointer"
+                    onclick="closeGalleryModal()">&times;</span>
+                <div class="relative w-[90%] max-w-[600px] p-4 lg:p-16 mx-auto">
+                    <!-- Slides -->
+                    <div class="gallerySlide hidden">
+                        <img src="https://images.unsplash.com/photo-1736478770857-ed521c3b469c?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="w-full h-auto object-contain">
+                    </div>
+                    <div class="gallerySlide hidden">
+                        <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="w-full h-auto object-contain">
+                    </div>
+                    <div class="gallerySlide hidden">
+                        <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="w-full h-auto object-contain">
+                    </div>
+                    <div class="gallerySlide hidden">
+                        <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="w-full h-auto object-contain">
+                    </div>
+                    <div class="gallerySlide hidden">
+                        <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="w-full h-auto object-contain">
+                    </div>
+                    <div class="gallerySlide hidden">
+                        <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="w-full h-auto object-contain">
+                    </div>
+                    <div class="gallerySlide hidden">
+                        <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="w-full h-auto object-contain">
+                    </div>
+                    <div class="gallerySlide hidden">
+                        <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="w-full h-auto object-contain">
+                    </div>
+                    <div class="gallerySlide hidden">
+                        <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="w-full h-auto object-contain">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Files Section -->
+        <div id="files" class="max-w-[664px] bg-white mx-auto px-4">
+            <div class="bg-white p-4 sm:p-8">
+                <!-- Header Section -->
+                <div class="flex flex-row sm:flex-row items-start sm:items-center justify-center mt-8 mb-8 gap-4">
+                    <h2 id="fileHeading"
+                        class="text-3xl lg:text-4xl font-bold bg-purple-600 bg-clip-text text-transparent">
+                        Downloadable Files
+                    </h2>
+                </div>
+
+                <!-- Files Grid -->
+                <div class="space-y-4" id="filesContainer">
+                    <!-- Product Brochure -->
+                    <div
+                        class="group bg-white border border-gray-200 rounded-xl p-4 sm:p-5 hover:shadow-lg transition-all duration-300 flex flex-col sm:flex-row gap-4 hover:-translate-y-1">
+                        <div class="flex items-center sm:items-start gap-4 flex-1">
+                            <div
+                                class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-red-100 rounded-lg group-hover:scale-110 transition-all duration-300">
+                                <i class="fas fa-file-pdf text-2xl text-red-500"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-semibold text-gray-800">Product Brochure</h3>
+                                <p class="text-sm text-gray-500">A detailed brochure about our products</p>
+                                <span class="text-sm text-gray-500 mt-2 flex items-center sm:hidden">
+                                    <i class="fas fa-weight-hanging mr-1"></i>
+                                    2.5 MB
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:items-end gap-2 w-full sm:w-auto">
+                            <span class="text-sm text-gray-500 hidden sm:flex items-center">
+                                <i class="fas fa-weight-hanging mr-1"></i>
+                                2.5 MB
+                            </span>
+                            <a href="upload/simple.pdf"
+                                class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 group w-full sm:w-auto">
+                                <span>Download</span>
+                                <i
+                                    class="fas fa-download group-hover:translate-y-0.5 transition-transform duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Price List -->
+                    <div
+                        class="group bg-white border border-gray-200 rounded-xl p-4 sm:p-5 hover:shadow-lg transition-all duration-300 flex flex-col sm:flex-row gap-4 hover:-translate-y-1">
+                        <div class="flex items-center sm:items-start gap-4 flex-1">
+                            <div
+                                class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-green-100 rounded-lg group-hover:scale-110 transition-all duration-300">
+                                <i class="fas fa-file-excel text-2xl text-green-500"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-semibold text-gray-800">Price List</h3>
+                                <p class="text-sm text-gray-500">Updated price list for 2025</p>
+                                <span class="text-sm text-gray-500 mt-2 flex items-center sm:hidden">
+                                    <i class="fas fa-weight-hanging mr-1"></i>
+                                    1.2 MB
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:items-end gap-2 w-full sm:w-auto">
+                            <span class="text-sm text-gray-500 hidden sm:flex items-center">
+                                <i class="fas fa-weight-hanging mr-1"></i>
+                                1.2 MB
+                            </span>
+                            <a href="#"
+                                class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg hover:from-green-600 hover:to-green-700 transition-all duration-300 group w-full sm:w-auto">
+                                <span>Download</span>
+                                <i
+                                    class="fas fa-download group-hover:translate-y-0.5 transition-transform duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Conditions -->
+                    <div
+                        class="group bg-white border border-gray-200 rounded-xl p-4 sm:p-5 hover:shadow-lg transition-all duration-300 flex flex-col sm:flex-row gap-4 hover:-translate-y-1">
+                        <div class="flex items-center sm:items-start gap-4 flex-1">
+                            <div
+                                class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-blue-100 rounded-lg group-hover:scale-110 transition-all duration-300">
+                                <i class="fas fa-file-word text-2xl text-blue-500"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-semibold text-gray-800">Terms and Conditions</h3>
+                                <p class="text-sm text-gray-500">Details about terms and policies</p>
+                                <span class="text-sm text-gray-500 mt-2 flex items-center sm:hidden">
+                                    <i class="fas fa-weight-hanging mr-1"></i>
+                                    900 KB
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:items-end gap-2 w-full sm:w-auto">
+                            <span class="text-sm text-gray-500 hidden sm:flex items-center">
+                                <i class="fas fa-weight-hanging mr-1"></i>
+                                900 KB
+                            </span>
+                            <a href="#"
+                                class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 group w-full sm:w-auto">
+                                <span>Download</span>
+                                <i
+                                    class="fas fa-download group-hover:translate-y-0.5 transition-transform duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Additional files (initially hidden) -->
+                    <div class="hidden space-y-4" id="additionalFiles">
+                        <!-- Price List 2 -->
+                        <div
+                            class="group bg-white border border-gray-200 rounded-xl p-4 sm:p-5 hover:shadow-lg transition-all duration-300 flex flex-col sm:flex-row gap-4 hover:-translate-y-1">
+                            <div class="flex items-center sm:items-start gap-4 flex-1">
+                                <div
+                                    class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-green-100 rounded-lg group-hover:scale-110 transition-all duration-300">
+                                    <i class="fas fa-file-excel text-2xl text-green-500"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-semibold text-gray-800">Price List 2</h3>
+                                    <p class="text-sm text-gray-500">Updated price list for 2025</p>
+                                    <span class="text-sm text-gray-500 mt-2 flex items-center sm:hidden">
+                                        <i class="fas fa-weight-hanging mr-1"></i>
+                                        1.2 MB
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:items-end gap-2 w-full sm:w-auto">
+                                <span class="text-sm text-gray-500 hidden sm:flex items-center">
+                                    <i class="fas fa-weight-hanging mr-1"></i>
+                                    1.2 MB
+                                </span>
+                                <a href="#"
+                                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg hover:from-green-600 hover:to-green-700 transition-all duration-300 group w-full sm:w-auto">
+                                    <span>Download</span>
+                                    <i
+                                        class="fas fa-download group-hover:translate-y-0.5 transition-transform duration-300"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Terms and Conditions 2 -->
+                        <div
+                            class="group bg-white border border-gray-200 rounded-xl p-4 sm:p-5 hover:shadow-lg transition-all duration-300 flex flex-col sm:flex-row gap-4 hover:-translate-y-1">
+                            <div class="flex items-center sm:items-start gap-4 flex-1">
+                                <div
+                                    class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-blue-100 rounded-lg group-hover:scale-110 transition-all duration-300">
+                                    <i class="fas fa-file-word text-2xl text-blue-500"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-semibold text-gray-800">Terms and Conditions 2</h3>
+                                    <p class="text-sm text-gray-500">Details about terms and policies</p>
+                                    <span class="text-sm text-gray-500 mt-2 flex items-center sm:hidden">
+                                        <i class="fas fa-weight-hanging mr-1"></i>
+                                        900 KB
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:items-end gap-2 w-full sm:w-auto">
+                                <span class="text-sm text-gray-500 hidden sm:flex items-center">
+                                    <i class="fas fa-weight-hanging mr-1"></i>
+                                    900 KB
+                                </span>
+                                <a href="#"
+                                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 group w-full sm:w-auto">
+                                    <span>Download</span>
+                                    <i
+                                        class="fas fa-download group-hover:translate-y-0.5 transition-transform duration-300"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View More Button -->
+                <div class="mt-8 text-center">
+                    <button onclick="toggleFiles()" id="filesButton"
+                        class="group inline-flex items-center justify-center gap-2 sm:w-auto px-8 py-3 bg-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                        <span id="buttonText">View More</span>
+                        <i id="buttonIcon"
+                            class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Youtube videos Section -->
+        <div id="youtube">
+            <div class="max-w-[664px] bg-white lg:p-4 p-6 mx-auto">
+                <div class="flex flex-row sm:flex-row items-start sm:items-center justify-center mt-8 mb-8 gap-4">
+                    <h2 id="youtubeHeading"
+                        class="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
+                        Our Videos </h2>
+                </div>
+                <div id="video-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                    <!-- Video cards will be inserted here by JavaScript -->
+                </div>
+
+            </div>
+
+            <!-- Video Modal -->
+            <div id="video-modal"
+                class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+                <div class="bg-white rounded-lg w-8/12 max-w-md mx-2">
+                    <!-- Modal Header -->
+                    <div class="p-4 border-b flex justify-between items-center">
+                        <h3 id="modal-title" class="text-xl font-semibold">Modal Title</h3>
+                        <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Modal Content -->
+                    <div class="relative aspect-square">
+                        <div id="modal-video-container"
+                            class="absolute inset-0 bg-gray-200 flex items-center justify-center">
+                            <!-- Placeholder for the video -->
+                            <span class="text-gray-500">Video Content Here</span>
+                        </div>
+                    </div>
+
+                    <!-- Modal Footer -->
+                    <div class="p-4">
+                        <a id="youtube-link" href="#" target="_blank"
+                            class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                            Watch on YouTube
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Business Hours   Section -->
+        <div id="businesshours" class="max-w-[664px] mx-auto bg-white p-6 ">
+            <!-- Header Section -->
+            <div id="hoursText" class="text-center bg-indigo-600 p-4 rounded-t-3xl">
+                <h2 class="text-3xl font-semibold text-white">Business Hours</h2>
+                <p class="text-blue-100 mt-1 text-sm">Visit us during our operating hours</p>
+            </div>
+
+            <!-- Hours List -->
+            <div class="space-y-4 p-6">
+                <!-- Monday -->
+                <div
+                    class="flex justify-between items-center p-4 border-b-2 border-gray-100 rounded-lg transition transform hover:scale-105 hover:bg-gray-50">
+                    <div class="flex items-center">
+                        <i class="fas fa-calendar-day text-blue-500 mr-3"></i>
+                        <span class="font-medium text-gray-700">Monday</span>
+                    </div>
+                    <span class="text-gray-600 font-semibold">9:00 AM - 6:00 PM</span>
+                </div>
+
+                <!-- Tuesday -->
+                <div
+                    class="flex justify-between items-center p-4 border-b-2 border-gray-100 rounded-lg transition transform hover:scale-105 hover:bg-gray-50">
+                    <div class="flex items-center">
+                        <i class="fas fa-calendar-day text-blue-500 mr-3"></i>
+                        <span class="font-medium text-gray-700">Tuesday</span>
+                    </div>
+                    <span class="text-gray-600 font-semibold">9:00 AM - 6:00 PM</span>
+                </div>
+
+                <!-- Wednesday -->
+                <div
+                    class="flex justify-between items-center p-4 border-b-2 border-gray-100 rounded-lg transition transform hover:scale-105 hover:bg-gray-50">
+                    <div class="flex items-center">
+                        <i class="fas fa-calendar-day text-blue-500 mr-3"></i>
+                        <span class="font-medium text-gray-700">Wednesday</span>
+                    </div>
+                    <span class="text-gray-600 font-semibold">9:00 AM - 6:00 PM</span>
+                </div>
+
+                <!-- Thursday -->
+                <div
+                    class="flex justify-between items-center p-4 border-b-2 border-gray-100 rounded-lg transition transform hover:scale-105 hover:bg-gray-50">
+                    <div class="flex items-center">
+                        <i class="fas fa-calendar-day text-blue-500 mr-3"></i>
+                        <span class="font-medium text-gray-700">Thursday</span>
+                    </div>
+                    <span class="text-gray-600 font-semibold">9:00 AM - 6:00 PM</span>
+                </div>
+
+                <!-- Friday -->
+                <div
+                    class="flex justify-between items-center p-4 border-b-2 border-gray-100 rounded-lg transition transform hover:scale-105 hover:bg-gray-50">
+                    <div class="flex items-center">
+                        <i class="fas fa-calendar-day text-blue-500 mr-3"></i>
+                        <span class="font-medium text-gray-700">Friday</span>
+                    </div>
+                    <span class="text-gray-600 font-semibold">9:00 AM - 5:00 PM</span>
+                </div>
+
+                <!-- Saturday -->
+                <div
+                    class="flex justify-between items-center p-4 border-b-2 border-gray-100 rounded-lg transition transform hover:scale-105 hover:bg-gray-50">
+                    <div class="flex items-center">
+                        <i class="fas fa-calendar-day text-blue-500 mr-3"></i>
+                        <span class="font-medium text-gray-700">Saturday</span>
+                    </div>
+                    <span class="text-gray-600 font-semibold">10:00 AM - 4:00 PM</span>
+                </div>
+
+                <!-- Sunday -->
+                <div
+                    class="flex justify-between items-center p-4 border-b-2 border-gray-100 rounded-lg transition transform hover:scale-105 hover:bg-gray-50">
+                    <div class="flex items-center">
+                        <i class="fas fa-calendar-day text-blue-500 mr-3"></i>
+                        <span class="font-medium text-gray-700">Sunday</span>
+                    </div>
+                    <span class="text-red-500 font-semibold">Closed</span>
+                </div>
+            </div>
+
+            <!-- Status Badge -->
+            <div
+                class="text-center py-3 px-6 bg-emerald-600 rounded-b-3xl text-white font-medium transition-all duration-200 transform hover:scale-90">
+                Currently Open
+            </div>
+        </div>
+
+        <!-- Our Enquiry Form Section-->
+        <div id="enquiryform" class="max-w-[664px] bg-white lg:p-10 p-4 w-full mx-auto">
+            <!-- Form Card -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-2xl shadow-emerald-200">
+                <div id="contactText" class="bg-gradient-to-r from-emerald-700 to-emerald-900 lg:p-6 p-4">
+                    <h2 class="text-2xl font-bold text-white">Contact Us</h2>
+                    <p class="text-emerald-100 mt-1 text-sm">Share your thoughts with us</p>
+                </div>
+
+                <!-- Form Body -->
+                <form id="enquiryForm" class="p-8 space-y-6">
+                    <!-- Name Field -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium text-gray-700" for="name">Full Name</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fa-solid fa-user text-gray-400"></i>
+                            </div>
+                            <input type="text" id="name"
+                                class="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-gray-900 placeholder:text-gray-400"
+                                placeholder="Aviral Yadav" required>
+                        </div>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium text-gray-700" for="email">Email Address</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fa-solid fa-envelope text-gray-400"></i>
+                            </div>
+                            <input type="email" id="email"
+                                class="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-gray-900 placeholder:text-gray-400"
+                                placeholder="aviral224@example.com" required>
+                        </div>
+                    </div>
+
+                    <!-- Phone Field -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium text-gray-700" for="phone">Phone Number</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fa-solid fa-phone text-gray-400"></i>
+                            </div>
+                            <input type="tel" id="phone"
+                                class="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-gray-900 placeholder:text-gray-400"
+                                placeholder="+91 (790) 5470224" required>
+                        </div>
+                    </div>
+
+                    <!-- Message Field -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium text-gray-700" for="message">Message</label>
+                        <div class="relative">
+                            <div class="absolute top-3 left-0 pl-3 pointer-events-none">
+                                <i class="fa-solid fa-message text-gray-400"></i>
+                            </div>
+                            <textarea id="message" rows="4"
+                                class="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-gray-900 placeholder:text-gray-400 resize-none"
+                                placeholder="Your message here..." required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit"
+                        class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-medium py-2.5 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2">
+                        Submit Message
+                    </button>
+                </form>
+
+                <!-- Success Message (Hidden by default) -->
+                <div id="successMessage" class="hidden p-6 text-center bg-emerald-50">
+                    <div class="text-emerald-700 text-xl font-semibold mb-2">Thank you for your message!</div>
+                    <p class="text-emerald-600">We will contact you shortly.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Awards & Certificates Section -->
+        <div id="awards" class="p-8 max-w-[664px] mx-auto bg-white">
+            <!-- Section Header -->
+            <div class="text-center mb-10">
+                <div
+                    class="flex flex-col md:flex-row items-center justify-center text-center md:text-left space-y-4 md:space-y-0 md:space-x-4">
+                    <h2 id="achievementsHeading" class="lg:text-4xl text-3xl font-bold text-gray-800">
+                        Our Achievements
+                    </h2>
+                    <img src="assets/trophy.png" class="w-16 h-16 md:w-20 md:h-20" alt="Trophy">
+                </div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Recognizing our commitment to excellence and innovation in the industry through various awards and
+                    certifications.
+                </p>
+            </div>
+
+            <!-- Awards Grid -->
+            <div id="awards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Award Card Template -->
+                <div
+                    class="award-card group bg-white rounded-t-[50px] rounded-b-xl shadow-lg hover:shadow-yellow-200 overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hidden">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/award.avif" alt="Award Image"
+                            class="w-full h-48 object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-white p-2 rounded-full">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3
+                            class="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-700 transition-colors duration-300">
+                            Award Title
+                        </h3>
+                        <p class="text-gray-600 group-hover:text-yellow-500">
+                            Award description goes here.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Award Card 2 -->
+                <div
+                    class=" award-card group bg-white rounded-t-[50px] rounded-b-xl shadow-lg hover:shadow-yellow-200 overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/award2.avif" alt="Excellence Certificate"
+                            class="w-full h-48 object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-blue-500 text-white p-2 rounded-full">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3
+                            class="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-700 transition-colors duration-300">
+                            Excellence Certificate
+                        </h3>
+                        <p class="text-gray-600 group-hover:text-yellow-500">ISO 9001:2015 certification for maintaining
+                            highest quality standards.</p>
+                    </div>
+                </div>
+
+                <!-- Award Card 3 -->
+                <div
+                    class=" award-card group bg-white rounded-t-[50px] rounded-b-xl shadow-lg hover:shadow-yellow-200 overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/award3.avif" alt="Industry Leadership Award"
+                            class="w-full h-48 object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white p-2 rounded-full">
+                            <i class="fas fa-award"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3
+                            class="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-700 transition-colors duration-300">
+                            Industry Leadership Award
+                        </h3>
+                        <p class="text-gray-600 group-hover:text-yellow-500">Recognized for outstanding contribution to
+                            industry development and growth.</p>
+                    </div>
+                </div>
+
+                <!-- Award Card 4 -->
+                <div
+                    class="award-card group bg-white rounded-t-[50px] rounded-b-xl shadow-lg hover:shadow-yellow-200 overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/award4.avif" alt="Industry Leadership Award"
+                            class="w-full h-48 object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white p-2 rounded-full">
+                            <i class="fas fa-award"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3
+                            class="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-700 transition-colors duration-300">
+                            Industry Leadership Award
+                        </h3>
+                        <p class="text-gray-600 group-hover:text-yellow-500">Recognized for outstanding contribution to
+                            industry development and growth.</p>
+                    </div>
+                </div>
+
+                <!-- Award Card 5 -->
+                <div
+                    class="award-card group bg-white rounded-t-[50px] rounded-b-xl shadow-lg hover:shadow-yellow-200 overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/award.avif" alt="Best Innovation Award"
+                            class="w-full h-48 object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-white p-2 rounded-full">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3
+                            class="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-700 transition-colors duration-300">
+                            Best Innovation Award 2024
+                        </h3>
+                        <p class="text-gray-600 group-hover:text-yellow-500">Recognized for groundbreaking innovations
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Award Card 6 -->
+                <div
+                    class="award-card group bg-white rounded-t-[50px] rounded-b-xl shadow-lg hover:shadow-yellow-200 overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/award2.avif" alt="Excellence Certificate"
+                            class="w-full h-48 object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-blue-500 text-white p-2 rounded-full">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3
+                            class="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-700 transition-colors duration-300">
+                            Excellence Certificate
+                        </h3>
+                        <p class="text-gray-600 group-hover:text-yellow-500">ISO 9001:2015 certification for maintaining
+                            highest quality standards.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- View More Button -->
+            <div class="mt-8 text-center">
+                <button id="toggle-btn"
+                    class="group inline-flex items-center justify-center gap-2 sm:w-auto px-8 py-3 bg-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                    <span>View More</span>
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+                </button>
+            </div>
+        </div>
+
+
+        <!-- Reviews Section -->
+        <div id="reviews" class="p-8 max-w-[664px] bg-white mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12 space-y-4">
+                <h2 id="customerHeading" class="text-3xl md:text-4xl font-bold text-gray-900">What Our Customers Say
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover why thousands of customers love our products and
+                    services. Read their stories and experiences below.</p>
+            </div>
+
+            <!-- Add Review Button -->
+            <div class="mb-8 text-center">
+                <!-- Modern gradient button with shine effect -->
+                <button onclick="toggleReviewForm()"
+                    class="group relative inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-4 font-medium text-white transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-lg hover:shadow-green-500/30 focus:outline-none focus:ring-2 focus:ring-green-500/50 active:scale-[0.98] rounded-xl">
+                    <!-- Shine effect overlay -->
+                    <div
+                        class="absolute inset-0 h-full w-full rounded-xl bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000">
+                    </div>
+
+                    <!-- Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:scale-110"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+
+                    <!-- Text -->
+                    <span class="text-base">Add Your Review</span>
+
+                    <!-- Sparkle emoji -->
+                    <span class="text-lg group-hover:animate-bounce">✨</span>
+                </button>
+            </div>
+
+            <!-- Review Form (Hidden by default) -->
+            <div id="reviewForm"
+                class="hidden max-w-[664px] mx-auto bg-white rounded-xl shadow-lg p-6 mb-8 transform transition-all duration-300">
+                <form id="reviewForm" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                        <input type="text" id="nameInput"
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="Enter your name">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Rating</label>
+                        <div class="flex space-x-2" id="starsContainer">
+                            <span class="star cursor-pointer text-3xl" data-rating="1">★</span>
+                            <span class="star cursor-pointer text-3xl" data-rating="2">★</span>
+                            <span class="star cursor-pointer text-3xl" data-rating="3">★</span>
+                            <span class="star cursor-pointer text-3xl" data-rating="4">★</span>
+                            <span class="star cursor-pointer text-3xl" data-rating="5">★</span>
+                        </div>
+                        <input type="hidden" id="ratingInput" value="0">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Review</label>
+                        <textarea id="reviewInput" rows="4"
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="Share your experience"></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md transition duration-200 hover:scale-105">
+                        Submit Review
+                    </button>
+
+                </form>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <!-- Review Card 1 -->
+                <div
+                    class="review-card bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-blue-200 flex justify-center items-center text-gray-800 font-bold text-lg">
+                            S</div>
+                        <div class="ml-4">
+                            <h3 class="font-semibold text-lg text-gray-900">Sarah Johnson</h3>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        "Absolutely amazing service! The attention to detail and customer care exceeded my expectations.
+                        Would highly recommend to anyone looking for quality products."
+                    </p>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div
+                    class="review-card bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-purple-200 flex justify-center items-center text-gray-800 font-bold text-lg">
+                            M</div>
+                        <div class="ml-4">
+                            <h3 class="font-semibold text-lg text-gray-900">Michael Chen</h3>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        "Great experience overall. The product quality is outstanding, and the customer service team was
+                        very helpful throughout the process."
+                    </p>
+                </div>
+
+                <!-- Review Card 3 (Initially Hidden) -->
+                <div
+                    class="review-card hidden bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-teal-200 flex justify-center items-center text-gray-800 font-bold text-lg">
+                            E</div>
+                        <div class="ml-4">
+                            <h3 class="font-semibold text-lg text-gray-900">Emily Davis</h3>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        "I'm impressed with the quality and design. The team went above and beyond to ensure everything
+                        was perfect. Will definitely be coming back!"
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <button id="viewMoreBtn"
+                    class="group inline-flex items-center justify-center gap-2 sm:w-auto px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                    <span>View More Reviews</span>
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+                </button>
+            </div>
+
+        </div>
+
+
+        <!-- Payment details Section -->
+        <div id="payments" class="max-w-[664px] w-full mx-auto bg-white flex items-center justify-center p-4">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <!-- Header -->
+                <div id="paymentsText" class="bg-gradient-to-r from-blue-600 to-blue-700 p-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Payment Methods</h2>
+                    <p class="text-blue-100 mt-2">Choose your preferred payment method</p>
+                </div>
+
+                <!-- Payment Methods Container -->
+                <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Bank Transfer Card -->
+                    <div
+                        class="group bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:shadow-blue-200 transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-center space-x-4">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full group-hover:bg-blue-600 transition-colors duration-300">
+                                <svg class="w-6 h-6 text-blue-600 group-hover:text-white" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 6l2-2h14l2 2M3 6v14a2 2 0 002 2h14a2 2 0 002-2V6M3 6h18M9 3v3M15 3v3">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Bank Transfer</h3>
+                        </div>
+
+                        <div class="mt-6 space-y-4">
+                            <div class="animate-fade-in">
+                                <p class="text-sm text-gray-600 font-medium">Account Holder</p>
+                                <p class="text-gray-800">John Smith Enterprise</p>
+                            </div>
+                            <div class="animate-fade-in" style="animation-delay: 100ms;">
+                                <p class="text-sm text-gray-600 font-medium">Account Number</p>
+                                <p class="text-gray-800">1234 5678 9012 3456</p>
+                            </div>
+                            <div class="animate-fade-in" style="animation-delay: 200ms;">
+                                <p class="text-sm text-gray-600 font-medium">IFSC Code</p>
+                                <p class="text-gray-800">ABCD0123456</p>
+                            </div>
+                            <div class="animate-fade-in" style="animation-delay: 200ms;">
+                                <p class="text-sm text-gray-600 font-medium">Bank Name</p>
+                                <p class="text-gray-800">Bank of Baroda</p>
+                            </div>
+                            <div class="animate-fade-in" style="animation-delay: 200ms;">
+                                <p class="text-sm text-gray-600 font-medium">Branch Name</p>
+                                <p class="text-gray-800">Kanpur Nagar</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UPI Card -->
+                    <div
+                        class="group bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:shadow-green-200 transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-center space-x-4">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-green-100 rounded-full group-hover:bg-green-600 transition-colors duration-300">
+                                <svg class="w-6 h-6 text-green-600 group-hover:text-white" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">UPI Payment</h3>
+                        </div>
+
+                        <div class="mt-6 space-y-4">
+                            <div class="animate-fade-in">
+                                <p class="text-sm text-gray-600 font-medium">UPI ID</p>
+                                <p class="text-gray-800">business@upibank</p>
+                            </div>
+                            <div class="animate-fade-in" style="animation-delay: 100ms;">
+                                <p class="text-sm text-gray-600 font-medium">Business Name</p>
+                                <p class="text-gray-800">John Smith Enterprise</p>
+                            </div>
+                            <div class="mt-4">
+                                <div class="bg-gray-50 hover:bg-black py-2 rounded-lg flex items-center justify-center">
+                                    <img src="assets/qr.png" alt="QR Code" class="w-36 h-36 rounded-2xl" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Note -->
+                <div class="px-6 py-4 bg-red-50 border-t border-gray-100">
+                    <p class="text-sm text-red-600 text-center">Please verify all details before making the payment. For
+                        any queries, contact our support team.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- QR code scan Section -->
+        <div id="qrcode">
+            <div class="max-w-[664px] bg-white p-6 w-full mx-auto">
+                <!-- Main QR Code Card -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class=" p-6 flex flex-col items-center justify-center ">
+                        <h2 id="qrText" class="text-3xl font-bold text-black">vCard QR CODE</h2>
+                        <p class="text-purple-900 mt-2">Scan to view digital business card</p>
+                    </div>
+
+
+                    <!-- QR Code Container -->
+                    <div class="p-6">
+                        <div class="bg-gray-50 hover:bg-black p-6 rounded-xl flex flex-col items-center justify-center group cursor-pointer transition-all duration-300 relative overflow-hidden"
+                            onclick="openqrModal()">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-transparent via-gray-400 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shine">
+                            </div>
+                            <img src="assets/qr.png" alt="QR Code" id="qrCodeImage"
+                                class="w-40 h-40 rounded-3xl group-hover:scale-105 transition-transform duration-300" />
+                            <p class="text-sm text-gray-500 mt-3">Click to enlarge</p>
+                        </div>
+
+
+                        <!-- Action Buttons -->
+                        <div class="grid grid-cols-2 gap-4 mt-6">
+                            <button onclick="downloadQR()"
+                                class="flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-300 group">
+                                <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                                Download
+                            </button>
+                            <button onclick="shareQR()"
+                                class="flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors duration-300 group">
+                                <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                                </svg>
+                                Share
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100">
+                        <p class="text-sm text-gray-600 text-center">Scan with any QR code reader or camera app</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Background -->
+            <div id="modal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center p-4"
+                onclick="closeqrModal()">
+                <!-- Modal Content -->
+                <div class="bg-white rounded-2xl p-6 max-w-lg w-full transform transition-all duration-300 scale-0"
+                    onclick="event.stopPropagation()" id="modalContent">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">QR Code</h3>
+                        <button onclick="closeqrModal()" class="text-gray-500 hover:text-gray-700">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl flex items-center justify-center">
+                        <img src="assets/qr.png" alt="QR Code Large" class="w-full max-w-md" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--terms pages Section -->
+        <div id="policies" class="max-w-[664px] w-full mx-auto bg-white  p-8">
+            <!-- Header with decorative elements -->
+            <div class="relative max-w-7xl mx-auto mb-10">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="h-32 w-32 rounded-full bg-indigo-100 opacity-50 blur"></div>
+                    <div class="h-24 w-24 rounded-full bg-purple-100 opacity-50 blur ml-12"></div>
+                </div>
+
+                <div class="relative text-center">
+                    <h1 id="resourcesText" class="text-4xl font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                        Essential Resources
+                    </h1>
+                    <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+                        Everything you need to know about our services and policies
+                    </p>
+                </div>
+            </div>
+
+            <!-- Cards Container -->
+            <div class="max-w-[664px] mx-auto">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-1">
+                    <!-- About Us Card -->
+                    <a href="/about" class="group">
+                        <div
+                            class="relative overflow-hidden rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-200">
+                            <div
+                                class="absolute top-0 right-0 -mt-4 -mr-4 h-20 w-20 rounded-full bg-indigo-300 opacity-50">
+                            </div>
+                            <div class="relative">
+                                <span class="inline-block rounded-lg bg-indigo-100 p-3">
+                                    <svg class="h-6 w-6 text-indigo-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <h3 class="mt-6 text-xl font-bold text-gray-900 group-hover:text-indigo-600">About Us
+                                </h3>
+                                <p class="mt-4 text-gray-500">Discover our story, mission, and the passionate team
+                                    driving our success forward.</p>
+                                <div class="mt-6 inline-flex items-center text-indigo-600">
+                                    <span class="text-sm font-medium">Learn more</span>
+                                    <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Privacy Policy Card -->
+                    <a href="/privacy" class="group">
+                        <div
+                            class="relative overflow-hidden rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-2xl hover:shadow-purple-200">
+                            <div
+                                class="absolute top-0 right-0 -mt-4 -mr-4 h-20 w-20 rounded-full bg-purple-300 opacity-50">
+                            </div>
+                            <div class="relative">
+                                <span class="inline-block rounded-lg bg-purple-100 p-3">
+                                    <svg class="h-6 w-6 text-purple-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <h3 class="mt-6 text-xl font-bold text-gray-900 group-hover:text-purple-600">Privacy
+                                    Policy</h3>
+                                <p class="mt-4 text-gray-500">Learn how we protect your data and maintain your privacy
+                                    with our comprehensive policy.</p>
+                                <div class="mt-6 inline-flex items-center text-purple-600">
+                                    <span class="text-sm font-medium">Read policy</span>
+                                    <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Terms of Service Card -->
+                    <a href="/terms" class="group">
+                        <div
+                            class="relative overflow-hidden rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-2xl hover:shadow-pink-200">
+                            <div
+                                class="absolute top-0 right-0 -mt-4 -mr-4 h-20 w-20 rounded-full bg-pink-300 opacity-50">
+                            </div>
+                            <div class="relative">
+                                <span class="inline-block rounded-lg bg-pink-100 p-3">
+                                    <svg class="h-6 w-6 text-pink-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <h3 class="mt-6 text-xl font-bold text-gray-900 group-hover:text-pink-600">Terms of
+                                    Service</h3>
+                                <p class="mt-4 text-gray-500">Review our terms and guidelines to understand our service
+                                    agreements and policies.</p>
+                                <div class="mt-6 inline-flex items-center text-pink-600">
+                                    <span class="text-sm font-medium">View terms</span>
+                                    <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/app.js"></script>
+
+
+</body>
+
+</html>
